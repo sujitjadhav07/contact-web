@@ -32,3 +32,11 @@ Step 1 : Run contact-api as a spring boot app.
 
 Step 2 : Run contact-web as a spring boot app.
 - App should be available at http://localhost:8080/contact
+
+Features :
+1. List all contacts
+![Alt text](/img/home.png?raw=true "Homepage")
+2. Add contact
+4. Update contact
+5. Deactivate contact
+
