@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="contact_base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Contact Details</title>
+</head>
+<body>
+	<section>
+<!-- 		<!-- alert message for record add successful or failure --> -->
+<!-- 		<div th:if="${session.message}" class="container col-8"> -->
+
+<!-- 			<div th:classappend="${'alert-'+session.message.type}" -->
+<!-- 				class="alert  text-center"> -->
+<!-- 				<span th:text="${session.message.content}"></span> -->
+<!-- 			</div> -->
+
+<!-- 			<!-- remove alert after completion --> -->
+<!-- 			<th:block th:text="${#session.removeAttribute('message')}"></th:block> -->
+<!-- 		</div> -->
+
+		<div th:if="${contact}" class="card m-3">
+			<div class="card-body text-center">
+				<table class="table">
+					<tbody>
+						<tr>
+							<th scope="col">#ID</th>
+							<th scope="col"><span th:text="${contact.id}"></span></th>
+						</tr>
+						
+						<tr>
+							<th scope="col">First Name</th>
+							<th scope="col"><span th:text="${contact.firstName}"></span></th>
+						</tr>
+						
+						<tr>
+							<th scope="col">Last Name</th>
+							<th scope="col"><span th:text="${contact.lastName}"></span></th>
+						</tr>
+					
+						<tr>
+							<td>Email</td>
+							<td><span th:text="${contact.email}"></span></td>
+						</tr>
+
+						<tr>
+							<td>Phone Number</td>
+							<td><span th:text="${contact.phoneNumber}"></span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="container text-center" th:if="${message}">
+			<div class="card alert alert-warning">
+				<div class="card-body">
+
+					alert ...!! <span th:text="${message.content}"></span>
+
+				</div>
+			</div>
+		</div>
+
+	</section>
+</body>
+</html>

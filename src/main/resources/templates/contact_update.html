@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	th:replace="contact_base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title th:text="${title}"></title>
+</head>
+<body>
+	<section>
+		<div class="card ml-3 mr-3 mb-1">
+			<h2 class="card-header text-center">Update Contact</h2>
+			<!-- alert message -->
+			<div th:if="${session.alert}">
+				<div class="alert alert-dismissible text-center"
+					th:classappend="${'alert-'+session.alert.type}">
+					<span th:text="${session.alert.message}"></span>
+					<button type="button" class="btn-close" data-bs-dismiss="alert"
+						aria-label="Close"></button>
+				</div>
+				<!-- remove alert after completion -->
+				<th:block th:text="${#session.removeAttribute('alert')}"></th:block>
+			</div>
+			<div class="card-body">
+				<div class="container-fluid mt-1">
+					<div class="row">
+						<div class="col-md-10 offset-md-1">
+							<form action="#" th:object="${contact}"
+								enctype="multipart/form-data" method="POST"
+								th:action="@{/update-contact}">
+								<!-- Hidden field for contact ID -->
+								<input type="hidden" name="id" th:value="${contact.id}" />
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="firstName">First Name</label> <input type="text"
+											class="form-control" id="firstName" name="firstName"
+											placeholder="First Name" th:value="${contact.firstName}"
+											required>
+									</div>
+									<div class="form-group col-md-6">
+										<label for="firstName">Last Name</label> <input type="text"
+											class="form-control" id="lastName" name="lastName"
+											placeholder="Last Name" th:value="${contact.lastName}"
+											required>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="email">Email</label> <input type="email"
+										class="form-control" id="email" name="email"
+										placeholder="Email" th:value="${contact.email}" required>
+								</div>
+								<div class="form-group">
+									<label for="phoneNumber">Phone Number</label> <input
+										type="text" class="form-control" id="phoneNumber"
+										name="phoneNumber" placeholder="Phone Number"
+										th:value="${contact.phoneNumber}" required>
+								</div>
+								<button type="submit" class="btn btn-primary">Update</button>
+								<a th:href="'/contact'" class="btn btn-secondary" href="#">Close</a>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
