@@ -46,4 +46,4 @@ Features :
 ![Alt text](/img/deactivate-2.PNG?raw=true "Deactivate")
 
 ###### Code Coverage > 80%
-###### CI : CircleCI
+###### CI (Continuous Integration) : CircleCI (Passed)
