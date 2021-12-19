@@ -34,14 +34,16 @@ Step 2 : Run contact-web as a spring boot app.
 - App should be available at http://localhost:8080/contact
 
 Features :
-1. List all contacts
+1. **List all contacts**
 ![Alt text](/img/home.PNG?raw=true "Homepage")
-2. Add contact
+2. **Add contact**
 ![Alt text](/img/addContact.PNG?raw=true "Add Contact")
-3. Update contact
+3. **Update contact**
 ![Alt text](/img/updateContact.PNG?raw=true "Update Contact")
-4. Deactivate contact
+4. **Deactivate contact**
 
 ![Alt text](/img/deactivate-1.PNG?raw=true "Deactivate confirm")
 ![Alt text](/img/deactivate-2.PNG?raw=true "Deactivate")
 
+###### Code Coverage > 80%
+###### CI : CircleCI
