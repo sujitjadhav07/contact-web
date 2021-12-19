@@ -5,8 +5,8 @@ Contact Manager Web App
 
 
 Contact Manager consists of 2 components :
-1. contact - api : REST API for contacts
-2. contact - web : Web Application
+1. **contact - api** : REST API for contacts
+2. **contact - web** : Web Application
 
 ## Contact REST API
 Created using :
