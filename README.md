@@ -35,8 +35,13 @@ Step 2 : Run contact-web as a spring boot app.
 
 Features :
 1. List all contacts
-![Alt text](/img/home.png?raw=true "Homepage")
+![Alt text](/img/home.PNG?raw=true "Homepage")
 2. Add contact
-4. Update contact
-5. Deactivate contact
+![Alt text](/img/addContact.PNG?raw=true "Add Contact")
+3. Update contact
+![Alt text](/img/updateContact.PNG?raw=true "Update Contact")
+4. Deactivate contact
+
+![Alt text](/img/deactivate-1.PNG?raw=true "Deactivate confirm")
+![Alt text](/img/deactivate-2.PNG?raw=true "Deactivate")
 
